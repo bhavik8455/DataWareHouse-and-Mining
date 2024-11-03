@@ -53,8 +53,8 @@ ProbNoDomes = len([row for row in data if row[3]=='Domestic' and row[4]=='No'])/
 ProbDom_Yes = ProbYesDomes*ProbDomes/ProbYes
 
 #Calculated Probability of Stolen=Yes Over X = {(Color="Red", Type="SUV"; and Origin="Domestic") }
-ProbX_Yes = ProbRed_Yes * ProbSuv_Yes * ProbDom_Yes
-ProbX_No =  (ProbNoRed*ProbRed/ProbNo) * (ProbNoSuv*ProbSuv/ProbNo) *(ProbNoDomes*ProbDomes/ProbNo)
+ProbX_Yes = ProbRed_Yes * ProbSuv_Yes * ProbDom_Yes *ProbYes
+ProbX_No =  (ProbNoRed*ProbRed/ProbNo) * (ProbNoSuv*ProbSuv/ProbNo) *(ProbNoDomes*ProbDomes/ProbNo) * ProbNo
 
 
 #---------------------print dataset------------
