@@ -12,8 +12,6 @@ plt.bar(data['Domain'], data['Growth'], color='skyblue')
 plt.title('Growth by Domain - Bar Chart')
 plt.xlabel('Domain')
 plt.ylabel('Growth')
-plt.xticks(rotation=45)  # Rotates x-axis labels for better readability
-plt.tight_layout()  # Adjusts layout to prevent overlap
 plt.show()
 
 # Plot the histogram for 'Growth' data
@@ -21,5 +19,4 @@ plt.hist(data['Growth'], bins=10, color='orange', edgecolor='black')
 plt.title('Histogram of Growth')
 plt.xlabel('Growth')
 plt.ylabel('Frequency')
-plt.tight_layout()
 plt.show()
