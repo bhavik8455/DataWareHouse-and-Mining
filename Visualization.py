@@ -1,21 +1,25 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-#filtering the data 
+# Load the dataset
 data = pd.read_csv("dataset.csv")
 
-#sorting the data  based on the growth
-data.sort_values(by=['Growth'],ascending=True,inplace=True)
+# Sort the data based on the 'Growth' column in ascending order
+data.sort_values(by=['Growth'], ascending=True, inplace=True)
 
-#plotting the bar chart
-plt.bar(data['Domain'],data['Growth'])
-
-#giving the title to the bar chart
-plt.title('Bar chart')
-
-#labelling the bar chart
+# Plot the bar chart
+plt.bar(data['Domain'], data['Growth'], color='skyblue')
+plt.title('Growth by Domain - Bar Chart')
 plt.xlabel('Domain')
 plt.ylabel('Growth')
+plt.xticks(rotation=45)  # Rotates x-axis labels for better readability
+plt.tight_layout()  # Adjusts layout to prevent overlap
+plt.show()
 
-#showing the bar chart
+# Plot the histogram for 'Growth' data
+plt.hist(data['Growth'], bins=10, color='orange', edgecolor='black')
+plt.title('Histogram of Growth')
+plt.xlabel('Growth')
+plt.ylabel('Frequency')
+plt.tight_layout()
 plt.show()
